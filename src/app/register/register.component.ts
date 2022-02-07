@@ -36,7 +36,12 @@ export class RegisterComponent implements OnInit {
   
     signIn(){
       console.log(this.registerForm.value);
-      this.registerForm.reload()
+      // this.registerForm.reload()
+    let a=this.registerForm.value.email
+    let b=this.registerForm.value.pass
+
+  localStorage.setItem('email',a)
+localStorage.setItem('password',b)
     }
   
 }

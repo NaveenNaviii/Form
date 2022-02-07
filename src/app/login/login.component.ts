@@ -25,7 +25,11 @@ export class LoginComponent implements OnInit {
 
   login(){
     
-    
+    let  c=this.loginForm.value.email
+    let  d=this.loginForm.value.password
+localStorage.setItem('loginMail',c)
+localStorage.setItem('loginpass',d)
+
     return console.log(this.loginForm.value);
   
 
