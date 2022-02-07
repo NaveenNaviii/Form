@@ -1,37 +1,54 @@
-<p>edit-employees works!</p>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="5" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Employees</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Component</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+            <span aria-hidden="true">&times;</span>
+          </button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control">
+                <form [formGroup]="addForm" (ngSubmit)="add()">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <br>
+                        <input class="form-control" type="name" formControlName="uname" name="uname" id="uname" value="uname">
                     </div>
-                    <div class="form-group">
-                        <label>Desgnation</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    <span style="color: crimson;" *ngIf="uname.invalid && uname.touched">Only Characters are allowed</span>
+                    <br>
+                    <div>
+                        <label for="designation">Designation</label>
+                        <br>
+                        <input class="form-control" type="text" formControlName="desig" name="desig" id="desig" value="desig">
                     </div>
-                    <div class="form-group">
-                        <label>Salary</label>
-                        <input type="number" class="form-control" id="exampleInputPassword1">
+                    <span style="color: crimson;" *ngIf="desig.invalid && desig.touched">Only Characters are allowed</span>
+
+
+                    <br>
+                    <div>
+                        <label for="salary">Salary</label>
+                        <br>
+                        <input class="form-control" type="number" formControlName="usalary" name="usalary" id="usalary" value="usalary">
                     </div>
-                    <div class="form-group">
-                        <label>Age</label>
-                        <input type="number" class="form-control" id="exampleInputPassword1">
+                    <span style="color: crimson;" *ngIf="usalary.invalid && usalary.touched">Enter the amount in rupees</span>
+
+                    <br>
+                    <div>
+                        <label for="age">Age</label>
+                        <br>
+                        <input class="form-control" type="number" formControlName="uage" name="uage" id="uage" value="uage">
+                    </div>
+                    <span style="color: crimson;" *ngIf="uage.invalid && uage.touched">Enter the age between 18 and 150</span>
+                    <br>
+
+                    <!-- <button style="background-color: blue; align-items: center;" >Submit</button> -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+
             </div>
         </div>
     </div>
