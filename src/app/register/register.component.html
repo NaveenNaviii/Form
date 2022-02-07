@@ -9,35 +9,40 @@
           <form [formGroup]="registerForm">
             <div class="mt-3">
               <label for="" class="mt-2">Name</label><br>
-              <input class="container mt-2" type="text" formControlName="uname" name="uname">
+              <input class="container mt-2" type="text" formControlName="uname" name="uname"
+                placeholder="enter your name">
               <br>
               <span style="font-size: 10px;" class="text-danger" *ngIf="uname.invalid && uname.touched">Enter your name
                 using only character</span>
             </div>
             <div class="mt-2">
               <label for="">User Name</label><br>
-              <input class="container mt-2" type="text" formControlName="userN" name="userN">
+              <input class="container mt-2" type="text" formControlName="userN" name="userN"
+                placeholder="enter user name">
               <br>
               <span style="font-size: 10px;" class="text-danger" *ngIf="userN.invalid && userN.touched">Enter your name
                 using only character and numbers</span>
             </div>
             <div class="mt-2">
               <label for="">Email</label><br>
-              <input class="container mt-2" type="text" formControlName="email" name="email">
+              <input class="container mt-2" type="text" formControlName="email" name="email"
+                placeholder="enter your email">
               <br>
               <span style="font-size: 10px;" class="text-danger" *ngIf="email.invalid && email.touched">Enter your valid
                 email must use last @gmail.com</span>
             </div>
             <div class="mt-2">
               <label for="">Password</label><br>
-              <input class="container mt-2" type="password" formControlName="pass" name="pass">
+              <input class="container mt-2" type="password" formControlName="pass" name="pass"
+                placeholder="enter password">
               <br>
               <span style="font-size: 10px;" class="text-danger" *ngIf="pass.invalid && pass.touched">Enter correct
                 password using atleast one(character,!@#$%,numbers,a-z &A-Z)</span>
             </div>
             <div class="mt-2">
               <label for="">Confirm Pasword</label><br>
-              <input class="container mt-2" type="password" formControlName="cpass" name="cpass">
+              <input class="container mt-2" type="password" formControlName="cpass" name="cpass"
+                placeholder="re-enter password">
               <br>
               <span style="font-size: 10px;" class="text-danger"
                 *ngIf="(registerForm.value.pass!==registerForm.value.cpass)&&cpass.touched">Enter same
