@@ -1,1 +1,74 @@
-<p>login works!</p>
+
+<div class="container1" >
+  
+    <div class="form-group" >
+      <br>
+      <h4 style="margin-top: 10px;">Sign in to your account</h4> 
+  
+  
+  <div class="container">
+    
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input placeholder="Enter your email address..." required type="email" name="email" formControlName="email" class="form-control" >
+        <!-- <small style="border: 2px red;" id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        <span style="color: red;" *ngIf="email?.invalid && email?.touched">Email is required</span>
+      </div>
+      <div class="form-group">
+       <div style="display: flex;justify-content: space-between;"> 
+  <label for="exampleInputPassword1">Password</label>
+  <a href="#1">Forgot Password?</a>
+  </div>
+        <input placeholder="Enter your password... " type="password" name="password" formControlName="password" 
+        class="form-control" required>
+        <!-- <small  style="border: 2px red;" id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small> -->
+        <span style="color: red;" *ngIf="password?.invalid && password?.touched">Enter Strong Password</span>
+  
+      </div>
+     
+      <button type="submit">Sign in</button>
+    </form>
+   
+  </div>
+  <div class="container2">
+    <div><p  className="newuser">New user? <a href="#2">Create an account</a></p></div>
+  
+  </div>
+  
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
