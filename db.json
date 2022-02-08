@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "fullname": "nanu",
+      "designation": "software",
+      "age": "23",
+      "salary": "15000",
+      "id": 1
+    },
+    {
+      "fullname": "manjunath",
+      "designation": "software",
+      "age": "23",
+      "salary": "20000",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
